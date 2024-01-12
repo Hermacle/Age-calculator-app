@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './styles/App.css'
+import Input from './components/Input'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
       <h1>Age Calculator React App</h1>
-      
+      <form action="">
+      <Input label="Day" idValue="day" errorEmpty="error Empty" errorInvalid="error Invalid" errorWhole="error Whole"/>
+      <Input label="Month" idValue="month" errorEmpty="error Empty" errorInvalid="error Invalid" errorWhole="error Whole" />
+      <Input label="Year" idValue="year" errorEmpty="error Empty" errorInvalid="error Invalid" errorWhole="error Whole"/>
+      <button type='submit'>Submit</button>
+      </form>
     </div>
   )
 }
