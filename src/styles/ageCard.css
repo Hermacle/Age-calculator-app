@@ -38,7 +38,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
 }
-
+ 
 .input-bar {
   display: flex;
   flex-flow: row nowrap;
@@ -80,6 +80,7 @@ input:focus {
   font-weight: 200;
   margin: .4rem 0 .4rem 0;
   transition: .2s ease;
+  font-size: 10px;
 }
 
 .error,

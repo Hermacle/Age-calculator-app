@@ -20,10 +20,10 @@ function App() {
           </div>
           <div class="month-input">
             <Input label="month" id="month" max="12" min="1" maxlength="2" placeholder="MM" />
-            <Error id="month-error" errorText="Must be a valid month" />
+            <Error id="month-error" errorText="Must be a valid" />
           </div>
           <div class="year-input">
-            <Input label="month" id="year" min="100" maxlength="4" placeholder="YYYY" />
+            <Input label="year" id="year" min="100" maxlength="4" placeholder="YYYY" />
             <Error id="year-error" errorText="Must be a valid year" />
           </div>
         </div>

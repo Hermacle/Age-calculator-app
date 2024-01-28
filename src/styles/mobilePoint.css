@@ -38,8 +38,8 @@
 
   .error {
       width: 80%;
-      font-size: 11px;
-      font-weight: 400;
+      font-size: 9px;
+      font-weight: 200;
   }
 
   .submit-bar {
@@ -54,8 +54,8 @@
   }
 
   #arrow-icon {
-      height: 6.6vw;
-      width: 6.6vw;
+      height: 30px;
+      width: 30px;
   }
 
   .results-line {
@@ -68,7 +68,7 @@
   }
   
   .results-text {
-      font-size: 14vw;
+      font-size: 10vw;
       margin: -2rem 0 -2rem 1.5rem;
       letter-spacing: -.08rem;
   }
