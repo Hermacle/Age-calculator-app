@@ -1,5 +1,7 @@
 import './styles/App.css'
 import './styles/ageCard.css'
+import './styles/mobilePoint.css'
+
 import Input from './components/Input'
 import Result from './components/Result'
 import Error from './components/Error'
