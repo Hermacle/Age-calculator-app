@@ -1,0 +1,79 @@
+
+/* -------- Mobile View  -------- */
+
+@media screen and (max-width: 700px) { 
+ 
+  .calculator-card {
+    margin-top: 2rem;
+    height: fit-content;
+    border-radius: 30px 30px 100px 30px;
+    width: 90%;
+  }
+
+  .input-bar {
+      margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+      padding: 0;
+      justify-content: center;
+      align-items: right;
+  }
+
+  .day-input, .month-input, .year-input{
+      margin: 0;
+      padding: 0;
+      width: 33%;
+  }
+
+  .form-label {
+      font-size: .8rem;
+      letter-spacing: 0.25em;
+      margin: .4rem 0 .4rem 0;
+  }
+
+  .form-input {
+      font-size: 4.5vw;
+      height: 1.6rem;
+      width: 14.5vw;
+      padding: .8rem;
+  }
+
+  .error {
+      width: 80%;
+      font-size: 9px;
+      font-weight: 200;
+  }
+
+  .submit-bar {
+      position: relative;
+      text-align: center;
+      margin: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  #submit {
+      height: 3.75rem;
+      width: 3.75rem;
+  }
+
+  #arrow-icon {
+      height: 30px;
+      width: 30px;
+  }
+
+  .results-line {
+      margin-bottom: 2rem;
+  }
+
+  .results-box {
+      margin: 1.5rem 0 0 0;
+      padding: 0;
+  }
+  
+  .results-text {
+      font-size: 10vw;
+      margin: -2rem 0 -2rem 1.5rem;
+      letter-spacing: -.08rem;
+  }
+
+  .results-label {
+      margin-left: 2rem;
+  }
+}

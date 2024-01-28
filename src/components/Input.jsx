@@ -1,11 +1,16 @@
-function Input({label,idValue,errorEmpty,errorInvalid,errorWhole}){
-  return(
+
+function Input({ label, id, max, min, maxlength, placeholder }) {
+  return (
     <>
-    <label htmlFor={idValue}>{label}</label> <br />
-    <input type="number" id={idValue}/>
-    <p>{errorEmpty}</p>
-    <p>{errorInvalid}</p>
-    <p>{errorWhole}</p>
+      <label className="form-label" htmlFor={id}>{label}</label>
+      <input
+        className="form-input"
+        type="number"
+        id={id}
+        max={max}
+        min={min}
+        maxlength={maxlength}
+        placeholder={placeholder} />
     </>
   )
 }
