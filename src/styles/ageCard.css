@@ -28,9 +28,9 @@ body {
   align-items: center;
 }
 
-.age-calc-box {
+.calculator-card {
   margin-top: 2rem;
-  background-color: rgba(255, 255, 255, 0.144);
+  background-color: rgba(0, 0, 0, 0.192);
   border-radius: 30px 30px 190px 30px;
   width: 100%;
   max-width: 850px;
@@ -61,12 +61,13 @@ input {
   margin-right: 30px;
   font-weight: 700;
   color: var(--light_grey);
+  background-color: var(--off_black);
   box-shadow: none;
   border: 1px solid var(--smokey_grey);
   font-size: 1.6rem;
   border-radius: 10px;
   padding: .8rem 1.2rem .8rem 1.3rem;
-}
+}  
 
 input:focus {
   border-color: var(--purple);
@@ -75,7 +76,7 @@ input:focus {
 }
 
 .error {
-  color: red;
+  color: var(--light_red);
   font-weight: 200;
   margin: .4rem 0 .4rem 0;
   transition: .2s ease;

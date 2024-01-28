@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
      
-      <main class="age-calc-box">
+      <main class="calculator-card">
 
         {/* Input Bar */}
         <div class="input-bar">
