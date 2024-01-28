@@ -1,0 +1,21 @@
+.error{
+  color: red;
+  font-weight: 200;
+}
+.error,label{
+  text-transform: uppercase;
+  font-size: 12px;
+}
+label{
+  font-weight: 400;
+}
+input{
+  height: 26px;
+  width: 60px;
+}
+.inputItems{
+  display: flex;
+}
+form{
+  margin: aut;
+}
