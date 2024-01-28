@@ -7,7 +7,7 @@ import Error from './components/Error'
 function App() {
   return (
     <div>
-      <h1>Age Calculator React App</h1>
+     
       <main class="age-calc-box">
 
         {/* Input Bar */}
