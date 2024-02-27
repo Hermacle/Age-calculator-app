@@ -1,5 +1,5 @@
 
-function Input({ label, id, max, min, maxlength, placeholder }) {
+function Input({ label, id,value, max, min, maxlength, placeholder,onChange }) {
   return (
     <>
       <label className="form-label" htmlFor={id}>{label}</label>
@@ -7,10 +7,11 @@ function Input({ label, id, max, min, maxlength, placeholder }) {
         className="form-input"
         type="number"
         id={id}
+        value={value}
         max={max}
         min={min}
         maxlength={maxlength}
-        placeholder={placeholder} />
+        placeholder={placeholder} onChange={onChange} />
     </>
   )
 }
