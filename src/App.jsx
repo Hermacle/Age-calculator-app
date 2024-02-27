@@ -15,8 +15,56 @@ function App() {
   const [ageYears, setAgeYears] = useState('--');
   const [ageMonths, setAgeMonths] = useState('--');
   const [ageDays, setAgeDays] = useState('--');
+  const [errorText, setErrorText] = useState('');
+
+  const daysInTheMonth = (month) => {
+    if ([1, 3, 5, 7, 8, 10, 12].includes(parseInt(month))) {
+      return 31;
+    } else if ([4, 6, 9, 11].includes(parseInt(month))) {
+      return 30;
+    } else {
+      const daysValue = parseInt(year) % 4 === 0 ? 29 : 28;
+      return daysValue;
+    }
+  };
+
+  const validateFields = () => {
+    if (day === '' || month === '' || year === '') {
+      setErrorText('This field is requied ');
+      return false;
+    }
+
+    if (parseInt(day) < 1 || parseInt(day) > 31) {
+      setErrorText('Invalid Day');
+      return false;
+    }
+
+    if (parseInt(month) < 1 || parseInt(month) > 12) {
+      setErrorText('Invalid Month');
+      return false;
+    }
+
+    const inputDate = new Date(`${year}-${month}-${day}`);
+    const today = new Date();
+
+    if (inputDate > today) {
+      setErrorText('Must be in the past');
+      return false;
+    }
+
+    if (parseInt(day) > daysInTheMonth(month)) {
+      setErrorText('Invalid date');
+      return false;
+    }
+
+    return true;
+  };
 
   const calculateAge = () => {
+    if (!validateFields()) {
+      return;
+    }
+
     const birthDate = new Date(`${year}-${month}-${day}`);
     const today = new Date();
 
@@ -38,6 +86,7 @@ function App() {
     setAgeYears(years);
     setAgeMonths(months);
     setAgeDays(days);
+    setErrorText('');
   };
 
   return (
@@ -48,17 +97,17 @@ function App() {
           <div className="day-input">
             <Input label="day" id="day" max="31" min="1" maxLength="2" placeholder="DD" value={day}
               onChange={(e) => setDay(e.target.value)} />
-            <Error id="day-error" errorText="Must be a valid day" />
+            <Error id="day-error" errorText={errorText} />
           </div>
           <div className="month-input">
             <Input label="month" id="month" max="12" min="1" maxLength="2" placeholder="MM" value={month}
               onChange={(e) => setMonth(e.target.value)} />
-            <Error id="month-error" errorText="Must be a valid month" />
+            <Error id="month-error" errorText={errorText} />
           </div>
           <div className="year-input">
             <Input label="year" id="year" min="100" maxLength="4" placeholder="YYYY" value={year}
               onChange={(e) => setYear(e.target.value)} />
-            <Error id="year-error" errorText="Must be a valid year" />
+            <Error id="year-error" errorText={errorText} />
           </div>
         </div>
 
