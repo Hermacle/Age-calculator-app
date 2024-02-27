@@ -30,6 +30,7 @@ body {
 
 .calculator-card {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: rgba(0, 0, 0, 0.192);
   border-radius: 30px 30px 190px 30px;
   width: 100%;
@@ -164,14 +165,12 @@ label {
 #result-years,
 #result-months,
 #result-days {
-  position: absolute;
   color: var(--purple);
   font-weight: 800;
 }
 
 .results-label {
-  position: relative;
   left: 5rem;
-  margin-left: .6rem;
+  margin-left: .4rem;
   transition: left .5s cubic-bezier(.1, .4, .5, 1);
 }

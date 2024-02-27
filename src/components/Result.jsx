@@ -1,6 +1,6 @@
 function Result({ result, text,id }) {
   return (
-    <div className=" ">
+    <div className="results-line">
       <p className="results-text" id={id}>{result}</p>
       <p className="results-text results-label">{text}</p>
     </div>
