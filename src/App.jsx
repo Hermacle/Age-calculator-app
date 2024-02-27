@@ -72,9 +72,9 @@ function App() {
 
         {/* Results-Box */}
         <div className="results-box">
-          {ageYears !== '--' && <Result result={ageYears} text="years" id="result-years" />}
-          {ageMonths !== '--' && <Result result={ageMonths} text="months" id="result-months" />}
-          {ageDays !== '--' && <Result result={ageDays} text="days" id="result-days" />}
+          <Result result={ageYears} text="years" id="result-years" />
+          <Result result={ageMonths} text="months" id="result-months" />
+          <Result result={ageDays} text="days" id="result-days" />
         </div>
       </main>
     </div>
