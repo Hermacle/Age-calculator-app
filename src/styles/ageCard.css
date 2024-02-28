@@ -123,23 +123,13 @@ label {
   transition: background-color .3s linear;
   overflow: hidden;
 }
-
-#submit:active {
-  background-color: var(--off_black);
-  transition: none;
-}
-
-#submit:disabled {
-  background-color: var(--purple);
-  transition: background-color .3s linear;
-}
-
+ 
 #arrow-icon {
   transform: translateY(0);
-  transition: transform 1.4s;
+  transition: transform 1s;
 }
 
-#arrow-icon:active {
+#submit:active #arrow-icon {
   transform: translateY(100px);
 }
 
