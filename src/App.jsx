@@ -52,7 +52,16 @@ function App() {
     } else if (parseInt(month) < 1 || parseInt(month) > 12) {
       setErrorTextMonth('Invalid Month');
       isValid = false;
-    } else {
+ 
+    }
+    else if(parseInt(year) == new Date().getFullYear() && parseInt(month) == new Date().getMonth() + 1 && parseInt(day) > new Date().getDate()) {
+      setErrorTextDay('Invalid date');
+      isValid = false;
+    }else if(parseInt(year) == new Date().getFullYear() && parseInt(month) > new Date().getMonth() + 1) {
+      setErrorTextMonth('Invalid date');
+      isValid = false;
+    }
+    else {
       setErrorTextMonth('');
     }
 
