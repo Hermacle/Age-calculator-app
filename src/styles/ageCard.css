@@ -96,6 +96,13 @@ label {
   margin: .4rem 0 .4rem 0;
   transition: .1s ease;
 }
+.errorLabel{
+  color: var(--light_red);
+}
+.errorInput{
+  border-color: var(--light_red);
+}
+
 
 .submit-bar {
   position: relative;

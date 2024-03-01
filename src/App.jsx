@@ -47,17 +47,17 @@ function App() {
     }
 
     if (month === '') {
-      setErrorTextMonth('This field is required'); 
+      setErrorTextMonth('This field is required');
       isValid = false;
     } else if (parseInt(month) < 1 || parseInt(month) > 12) {
       setErrorTextMonth('Invalid Month');
       isValid = false;
- 
+
     }
-    else if(parseInt(year) == new Date().getFullYear() && parseInt(month) == new Date().getMonth() + 1 && parseInt(day) > new Date().getDate()) {
+    else if (parseInt(year) == new Date().getFullYear() && parseInt(month) == new Date().getMonth() + 1 && parseInt(day) > new Date().getDate()) {
       setErrorTextDay('Invalid date');
       isValid = false;
-    }else if(parseInt(year) == new Date().getFullYear() && parseInt(month) > new Date().getMonth() + 1) {
+    } else if (parseInt(year) == new Date().getFullYear() && parseInt(month) > new Date().getMonth() + 1) {
       setErrorTextMonth('Invalid date');
       isValid = false;
     }
@@ -120,17 +120,17 @@ function App() {
         <div className="input-bar">
           <div className="day-input">
             <Input label="day" id="day" max="31" min="1" maxLength="2" placeholder="DD" value={day}
-              onChange={(e) => setDay(e.target.value)} />
+              onChange={(e) => setDay(e.target.value)} error={errorTextDay !== ''} />
             <Error id="day-error" errorText={errorTextDay} />
           </div>
           <div className="month-input">
             <Input label="month" id="month" max="12" min="1" maxLength="2" placeholder="MM" value={month}
-              onChange={(e) => setMonth(e.target.value)} />
+              onChange={(e) => setMonth(e.target.value)} error={errorTextMonth !== ''} />
             <Error id="month-error" errorText={errorTextMonth} />
           </div>
           <div className="year-input">
             <Input label="year" id="year" min="100" maxLength="4" placeholder="YYYY" value={year}
-              onChange={(e) => setYear(e.target.value)} />
+              onChange={(e) => setYear(e.target.value)} error={errorTextYear !== ''} />
             <Error id="year-error" errorText={errorTextYear} />
           </div>
         </div>
@@ -138,7 +138,7 @@ function App() {
         {/* Submit Button */}
         <div className="submit-bar">
           <button id="submit" className="submit-arrow" onClick={calculateAge}>
-            <img id="arrow-icon" src="src/assets/images/icon-arrow.svg" alt="arrow icon"/>
+            <img id="arrow-icon" src="src/assets/images/icon-arrow.svg" alt="arrow icon" />
           </button>
           <div className="bar"></div>
         </div>

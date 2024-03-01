@@ -1,17 +1,17 @@
-
-function Input({ label, id,value, max, min, maxlength, placeholder,onChange }) {
+function Input({ label, id, value, max, min, maxlength, placeholder, onChange, error }) {
   return (
     <>
-      <label className="form-label" htmlFor={id}>{label}</label>
+      <label className={`form-label ${error ? 'errorLabel' : ''}`} htmlFor={id}>{label}</label>
       <input
-        className="form-input"
+        className={`form-input ${error ? 'errorInput' : ''}`}
         type="number"
         id={id}
         value={value}
         max={max}
         min={min}
-        maxlength={maxlength}
-        placeholder={placeholder} onChange={onChange} />
+        maxLength={maxlength}
+        placeholder={placeholder} 
+        onChange={onChange} />
     </>
   )
 }
