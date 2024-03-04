@@ -52,7 +52,6 @@ function App() {
     } else if (parseInt(month) < 1 || parseInt(month) > 12) {
       setErrorTextMonth('Invalid Month');
       isValid = false;
-
     }
     else if (parseInt(year) == new Date().getFullYear() && parseInt(month) == new Date().getMonth() + 1 && parseInt(day) > new Date().getDate()) {
       setErrorTextDay('Invalid date');
@@ -68,7 +67,10 @@ function App() {
     if (year === '') {
       setErrorTextYear('This field is required');
       isValid = false;
-    } else if (parseInt(year) > new Date().getFullYear()) {
+    } else if (parseInt(year) < 100) {
+      setErrorTextYear('Must be a valid year');
+      isValid = false;
+    }else if (parseInt(year) > new Date().getFullYear()) {
       setErrorTextYear('Must be in the past');
       isValid = false;
     } else {
