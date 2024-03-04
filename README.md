@@ -1,5 +1,3 @@
-
-
 <div align="center">
     <img alt="Desktop View" width="79%" src="src/screenshots/desktop.png"/> <img alt="Mobile View" width="20%" src="src/screenshots/Phone.png"/>
 </div>
@@ -8,7 +6,7 @@
 
 <h1 align="center">Frontend Mentor - Age calculator app solution</h1>
 <div align="center">
-    <h3><a href="Livelink">Live Link</a> || <a href="link">Solution Link</a></h3>
+    <h3><a href="https://age-calculator-hermacle.netlify.app">Live Link</a> || <a href="https://www.frontendmentor.io/solutions/age-calculator-using-react-wJ9YE8v_Pw">Solution Link</a></h3>
 </div>
 <br>
 
