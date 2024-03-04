@@ -1,7 +1,7 @@
 
 
 <div align="center">
-    <img alt="Desktop View" width="78%" src="src/screenshots/desktop.png"/> <img alt="Mobile View" width="20%" src="src/screenshots/Phone.png"/>
+    <img alt="Desktop View" width="70%" src="src/screenshots/desktop.png"/> <img alt="Mobile View" width="29%" src="src/screenshots/Phone.png"/>
 </div>
 
 *Desktop (left) 👈 and Mobile (right) 👉 Views*
