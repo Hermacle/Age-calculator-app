@@ -42,8 +42,8 @@ Users should be able to:
  
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/age-calculator-using-react-wJ9YE8v_Pw)
+- Live Site URL: [Live site URL](https://age-calculator-hermacle.netlify.app)
 
 ## My process
 
