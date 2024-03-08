@@ -109,10 +109,36 @@ function App() {
       days = prevMonthLastDay - birthDate.getDate() + today.getDate();
     }
 
-    // Set the calculated age values in the state variables
-    setAgeYears(years);
-    setAgeMonths(months);
-    setAgeDays(days);
+    
+     
+
+    // Animation for counting ageDays
+    let countDays = 0, countMonths = 0, countYears = 0;
+    const intervalDay = setInterval(() => {
+      if (countDays <= days) {
+        setAgeDays(countDays);
+        countDays++;
+      } else {
+        clearInterval(intervalDay);
+      }
+    }, 1000 / days);
+    const intervalMonths = setInterval(() => {
+      if (countMonths <= months) {
+        setAgeMonths(countMonths);
+        countMonths++;
+      } else {
+        clearInterval(intervalMonths);
+      }
+    }, 700 / months);
+    const intervalYears = setInterval(() => {
+      if (countYears <= years) {
+        setAgeYears(countYears);
+        countYears++;
+      } else {
+        clearInterval(intervalYears);
+      }
+    }, 1000 / years);
+     
   };
 
   return (
@@ -155,6 +181,7 @@ function App() {
       </main>
     </div>
   );
+  
 }
 
 export default App;
