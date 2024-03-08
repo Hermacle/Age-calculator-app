@@ -112,7 +112,18 @@ function App() {
     // Set the calculated age values in the state variables
     setAgeYears(years);
     setAgeMonths(months);
-    setAgeDays(days);
+
+    // Animation for counting ageDays
+    let count = 0;
+    const intervalDay = setInterval(() => {
+      if (count <= days) {
+        setAgeDays(count);
+        count++;
+      } else {
+        clearInterval(intervalDay);
+      }
+    }, 1000 / days);
+     
   };
 
   return (
@@ -155,6 +166,7 @@ function App() {
       </main>
     </div>
   );
+  
 }
 
 export default App;
